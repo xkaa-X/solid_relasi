@@ -53,7 +53,7 @@ class ProductController extends Controller
             $product = $this->productService->updateProduct($id, $request->validated());
             return $this->successResponse(new ProductResource($product), 'produk berhasil di update', 200);
         } catch (Exception $e) {
-            return $this->errorResponse($e, 'gagal mengupdate produk', 400);
+            return $this->erorrResponse($e, 'gagal mengupdate produk', 400);
         }
     }
 

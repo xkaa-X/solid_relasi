@@ -13,7 +13,8 @@ class StoreProductRequest extends FormRequest
             'category_id' => 'required|exists:categories,id',
             'nama_produk' => 'required|string|max:255',
             'harga' => 'required|numeric|min:0',
-            'stok' => 'required|integer|min:0'
+            'stok' => 'required|integer|min:0',
+            'status' => 'required|in:active,deactive'
         ];
     }
 }

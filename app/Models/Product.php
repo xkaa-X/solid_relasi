@@ -12,7 +12,8 @@ class Product extends Model
         'category_id',
         'nama_produk',
         'harga',
-        'stok'
+        'stok',
+        'status'
     ];
 
     public function category(): BelongsTo {

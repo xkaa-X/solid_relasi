@@ -14,6 +14,7 @@ class ProductResource extends JsonResource
             'nama_produk' => $this->nama_produk,
             'harga' => $this->harga,
             'stok' => (int) $this->stok,
+            'status' => $this->status,
             'created_at' => $this->created_at->toDateTimeString()
         ];
     }
