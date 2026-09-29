@@ -38,11 +38,6 @@ class CategoryService
 
     public function deleteCategory(int $id): bool
     {
-        $category = $this->categoryRepo->findById($id);
-        if ($category->products()->count() > 0) {
-            throw new Exception('Tidak bisa menghapus kategori karena masih memiliki produk terkait.');
-        }
-
         return $this->categoryRepo->delete($id);
     }
 }
